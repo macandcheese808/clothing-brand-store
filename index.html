@@ -13,8 +13,8 @@
 </head>
 <body>
 
-    <div class="pageloader">
-        <img src="./assets/background/1.gif" alt="" id="pageloader">
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
 
     <div class="announce-bar">
@@ -46,21 +46,22 @@
 
         </div>
 
-        <button class="navbar-burger" onclick="toggleMenu()"></button>
-
-        <nav class="menu">
-          <a href="#" style="animation-delay: 0.1s">DEFECT IDENTITY</a>
-          <a href="#" style="animation-delay: 0.2s">CORE COLLECTION</a>
-          <br>
-          <a href="#" style="animation-delay: 0.3s">T-Shirts & Hemden</a>
-          <a href="#" style="animation-delay: 0.4s">Hoodies & Sweaters</a>
-          <a href="#" style="animation-delay: 0.5s">Jacken</a>
-          <a href="#" style="animation-delay: 0.5s">Accessories</a>
-        </nav>
-
         <div class="main-item">
             <i class='bx bxs-t-shirt'></i>
             <i class='bx bx-cart'></i>
+        </div>
+
+        <div id="mobile-nav">
+            <div class="mobile-nav">
+                <span style="font-size:30px;cursor:pointer; padding-left: 10px; color: white;" onclick="openNav()">&#9776;</span>
+                <div id="mySidenav" class="sidenav">
+                    <a style="animation-delay: 0.1s" href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a style="animation-delay: 0.2s" href="#">About</a>
+                    <a style="animation-delay: 0.3s" href="#">Services</a>
+                    <a style="animation-delay: 0.4s" href="#">Clients</a>
+                    <a style="animation-delay: 0.5s" href="#">Contact</a>
+                  </div>
+            </div>
         </div>
 
     </div>
@@ -250,6 +251,16 @@
       } else {
         navbar.classList.remove("sticky");
       }
+    }
+</script>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
     }
 </script>
 
